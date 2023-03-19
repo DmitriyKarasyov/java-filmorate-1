@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -32,4 +33,8 @@ public class Film {
 
     @Positive
     private int duration;
+
+    private List<Genre> genre;
+
+    private Rating rating;
 }
