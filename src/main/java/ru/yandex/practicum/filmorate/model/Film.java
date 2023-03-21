@@ -2,8 +2,6 @@ package ru.yandex.practicum.filmorate.model;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Singular;
-import ru.yandex.practicum.filmorate.validator.InitializeIfNull;
 import ru.yandex.practicum.filmorate.validator.IsAfter;
 import ru.yandex.practicum.filmorate.validator.NotLongerThan;
 
@@ -12,8 +10,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.time.LocalDate;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 
 @Data
@@ -34,7 +30,7 @@ public class Film {
     @Positive
     private int duration;
 
-    private List<Genre> genre;
+    private Set<Genre> genres;
 
-    private Rating rating;
+    private Mpa mpa;
 }

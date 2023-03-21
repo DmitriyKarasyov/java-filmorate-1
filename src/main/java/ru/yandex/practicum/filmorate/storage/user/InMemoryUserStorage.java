@@ -53,7 +53,6 @@ public class InMemoryUserStorage implements UserStorage {
         return new ArrayList<>(users.values());
     }
 
-    @Override
     public User removeUserById(Integer id) {
         if (users.containsKey(id)) {
             return users.remove(id);

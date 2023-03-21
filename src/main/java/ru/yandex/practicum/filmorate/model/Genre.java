@@ -1,10 +1,15 @@
 package ru.yandex.practicum.filmorate.model;
 
-public enum Genre {
-    COMEDY,
-    DRAMA,
-    CARTOON,
-    THRILLER,
-    DOCUMENTARY,
-    ACTION
+import lombok.Data;
+
+@Data
+public class Genre implements Comparable<Genre> {
+
+    private final Integer id;
+    private final String name;
+
+    @Override
+    public int compareTo(Genre g) {
+        return this.id - g.getId();
+    }
 }
