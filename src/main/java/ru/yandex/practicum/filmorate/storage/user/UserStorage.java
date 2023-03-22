@@ -13,6 +13,4 @@ public interface UserStorage {
     public User getUserById(Long id);
 
     public List<User> getAllUsers();
-
-    public User removeUserById(Integer id);
 }

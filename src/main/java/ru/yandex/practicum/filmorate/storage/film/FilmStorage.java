@@ -13,6 +13,4 @@ public interface FilmStorage {
     public Film getFilmById(Long id);
 
     public List<Film> getAllFilms();
-
-    public Film removeFilmById(Long id);
 }
