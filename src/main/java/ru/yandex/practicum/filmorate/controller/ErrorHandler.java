@@ -28,6 +28,6 @@ public class ErrorHandler {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorResponse sqlExceptionHandler(SQLException e) {
-        return new ErrorResponse("Произошла ошибка при прочтении данных.");
+        return new ErrorResponse(e.getMessage());
     }
 }

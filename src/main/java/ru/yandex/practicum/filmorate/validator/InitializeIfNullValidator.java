@@ -8,7 +8,9 @@ import java.util.Set;
 public class InitializeIfNullValidator implements ConstraintValidator<InitializeIfNull, Set<Long>> {
     @Override
     public boolean isValid(Set<Long> set, ConstraintValidatorContext constraintValidatorContext) {
-        if (set == null) {set = new HashSet<>();}
+        if (set == null) {
+            set = new HashSet<>();
+        }
         return true;
     }
 }
